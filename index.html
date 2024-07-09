@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Add your custom styles here */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #1a237e;
+        color: #ffffff; /* White text color */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .input-group {
+        margin-bottom: 18px;
+    }
+    .input-group h3 {
+        margin-bottom: 10px;
+    }
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .input-group input {
+        width: 95%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .results {
+        margin-top: 20px;
+    }
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    table, th, td {
+        border: 1px solid black;
+        padding: 7px;
+        text-align: center;
+    }
+    th {
+        background-color: #1a237e;
+    }
+    .comparison-table {
+        display: flex;
+        justify-content: space-between;
+    }
+    .comparison-table .left-column,
+    .comparison-table .right-column {
+        flex: 0 0 48%;
+    }
+    .left-column {
+        margin-left: 0%;
+        background-color: #ffffff; /* Dark blue background */
+        color: #000000; /* White text color */
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .right-column {
+        margin-left: 0%;
+        background-color: #ffffff; /* Dark blue background */
+        color: #000000; /* White text color */
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .assumption-column {
+        flex: 0 0 45%; /* Adjusted width */
+        background-color: #ffffff; /* Dark blue background */
+        color: #000000; /* White text color */
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 18px; /* Space between DMX-7 and Assumption columns */
+    }
+    .right-column input,
+    .left-column input,
+    .assumption-column input {
+        width: 100%;
+        padding: 6px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ROI Calculator</h1>
+
+        <form action="#">
+            <!-- Comparison Inputs -->
+            <div class="input-group">
+                <div class="comparison-table">
+                    <div class="left-column">
+                        <h3>Control</h3>
+                        <label for="rmcr_control">Raw Material Cost (INR):</label>
+                        <input type="number" id="rmcr_control" step="0.01">
+                        <label for="plp_control">Process Loss (%):</label>
+                        <input type="number" id="plp_control" step="0.01">
+                        <label for="prtmm_control">Pallet Mill Run Time/MT (In minutes):</label>
+                        <input type="number" id="prtmm_control" step="0.01">
+                        <label for="saving_processing_cost">Savings on Processing Cost (%):</label>
+                        <input type="number" id="saving_processing_cost" step="0.01">
+                        <label for="elec_control">Electricity Consumption/MT (KWH):</label>
+                        <input type="number" id="elec_control" step="0.01">
+                        <label for="control_micronutrient">Reprocessed in (kg/MT):</label>
+                        <input type="number" id="control_micronutrient" step="0.01">
+                    </div>
+                    <div class="right-column">
+                        <h3>DMX-7</h3>
+                        <label for="rmcr_dmx7">Raw Material Cost (INR):</label>
+                        <input type="number" id="rmcr_dmx7" step="0.01">
+                        <label for="plp_dmx7">Process Loss (%):</label>
+                        <input type="number" id="plp_dmx7" step="0.01">
+                        <label for="prtmm_dmx7">Pallet Mill Run Time/MT (In minutes):</label>
+                        <input type="number" id="prtmm_dmx7" step="0.01">
+                        <label for="elec_dmx7">Electricity Consumption/MT (KWH):</label>
+                        <input type="number" id="elec_dmx7" step="0.01">
+                        <label for="dmx7_micronutrient">Reprocessed in (kg/MT):</label>
+                        <input type="number" id="dmx7_micronutrient" step="0.01">
+                    </div>
+                </div>
+            </div>
+            <!-- Assumptions -->
+            <div class="assumption-column">
+                <h3>Assumptions</h3>
+                <label for="rated_capacity">Rated Capacity of Pallet Mill (TPH):</label>
+                <input type="number" id="rated_capacity" step="0.01">
+                <label for="processing_cost">Processing Cost (of RM Cost):</label>
+                <input type="number" id="processing_cost" step="0.01">
+                <label for="electricity_rate">Commercial Electricity Rate (INR/Unit):</label>
+                <input type="number" id="electricity_rate" step="0.01">
+                <label for="premixers_cost">Cost of Premixers (Micro Nutrients - INR):</label>
+                <input type="number" id="premixers_cost" step="0.01">
+            </div>
+
+            <!-- Button to Calculate Comparison -->
+            <button type="button" onclick="calculateComparison()">Calculate Comparison</button>
+
+            <!-- Display Comparison Results -->
+            <div id="results" class="results">
+                <!-- Results will be displayed here -->
+            </div>
+        </form>
+    </div>
+
+    <!-- Include your JavaScript file -->
+    <script src="ROI.js"></script>
+</body>
+</html>
