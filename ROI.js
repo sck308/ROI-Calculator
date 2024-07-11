@@ -84,7 +84,7 @@ function calculateComparison() {
         <td>INR ${savings_on_electricity_consumption_dmx7.toFixed(2)}</td>
     </tr>
     <tr>
-        <td>Total Processing Cost (in Rupees)</td>
+        <td>Total Processing Cost (in Rupees) </td>
         <td>INR ${total_processing_cost_control.toFixed(2)}</td>
         <td>INR ${total_processing_cost_dmx7.toFixed(2)}</td>
     </tr>
