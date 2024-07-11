@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Comparison Calculator</h1>
+
+<!-- Control Inputs -->
+<div class="input-group">
+    <h3>Control Parameters</h3>
+    <label for="rated_capacity_control">Rated Capacity of Pallet Mill (TPH):</label>
+    <input type="number" id="rated_capacity_control" step="0.01">
+    <label for="processing_cost_control">Processing Cost (% of RM Cost):</label>
+    <input type="number" id="processing_cost_control" step="0.01">
+    <label for="electricity_rate_control">Electricity Rate (INR per KWH):</label>
+    <input type="number" id="electricity_rate_control" step="0.01">
+    <label for="micronutrient_cost_control">Cost of Micronutrients (INR per Kg):</label>
+    <input type="number" id="micronutrient_cost_control" step="0.01">
+    <label for="rm_cost_control">Raw Material Cost (INR):</label>
+    <input type="number" id="rm_cost_control" step="0.01">
+    <!-- Added for process gain -->
+    <label for="process_gain_control">Process Gain (%):</label>
+    <input type="number" id="process_gain_control" step="0.01">
+</div>
+
+<!-- DMX-7 Inputs -->
+<div class="input-group">
+    <h3>DMX-7 Parameters</h3>
+    <label for="rated_capacity_dmx7">Rated Capacity of Pallet Mill (TPH):</label>
+    <input type="number" id="rated_capacity_dmx7" step="0.01">
+    <label for="processing_cost_dmx7">Processing Cost (% of RM Cost):</label>
+    <input type="number" id="processing_cost_dmx7" step="0.01">
+    <label for="electricity_rate_dmx7">Electricity Rate (INR per KWH):</label>
+    <input type="number" id="electricity_rate_dmx7" step="0.01">
+    <label for="micronutrient_cost_dmx7">Cost of Micronutrients (INR per Kg):</label>
+    <input type="number" id="micronutrient_cost_dmx7" step="0.01">
+    <label for="rm_cost_dmx7">Raw Material Cost (INR):</label>
+    <input type="number" id="rm_cost_dmx7" step="0.01">
+    <!-- Added for process gain -->
+    <label for="process_gain_dmx7">Process Gain (%):</label>
+    <input type="number" id="process_gain_dmx7" step="0.01">
+</div>
+
+     <!-- Button to Calculate -->
+        <button onclick="calculateComparison()">Calculate Comparison</button>
+
+        <!-- Display Comparison Results -->
+        <div id="comparison-results" class="results">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script src="ROI.js"></script>
+</body>
+</html>
