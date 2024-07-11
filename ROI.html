@@ -102,12 +102,12 @@
                         <h3>Control</h3>
                         <label for="rmcr_control">Raw Material Cost (INR):</label>
                         <input type="number" id="rmcr_control" step="0.01">
-                        <label for="plp_control">Process Loss (%):</label>
+                        <label for="plp_control">Input Quantity</label>
                         <input type="number" id="plp_control" step="0.01">
+                        <label for="plp_dmx7_control">Output Quantity</label>
+                        <input type="number" id="plp_dmx7_control" step="0.01">
                         <label for="prtmm_control">Pallet Mill Run Time/MT (In minutes):</label>
                         <input type="number" id="prtmm_control" step="0.01">
-                        <label for="saving_processing_cost">Savings on Processing Cost (%):</label>
-                        <input type="number" id="saving_processing_cost" step="0.01">
                         <label for="elec_control">Electricity Consumption/MT (KWH):</label>
                         <input type="number" id="elec_control" step="0.01">
                         <label for="control_micronutrient">Reprocessed in (kg/MT):</label>
@@ -117,8 +117,10 @@
                         <h3>DMX-7</h3>
                         <label for="rmcr_dmx7">Raw Material Cost (INR):</label>
                         <input type="number" id="rmcr_dmx7" step="0.01">
-                        <label for="plp_dmx7">Process Loss (%):</label>
+                        <label for="plp_dmx7">Input Quantity</label>
                         <input type="number" id="plp_dmx7" step="0.01">
+                        <label for="plp_dmx7_output">Output Quantity</label>
+                        <input type="number" id="plp_dmx7_output" step="0.01">
                         <label for="prtmm_dmx7">Pallet Mill Run Time/MT (In minutes):</label>
                         <input type="number" id="prtmm_dmx7" step="0.01">
                         <label for="elec_dmx7">Electricity Consumption/MT (KWH):</label>
@@ -131,6 +133,10 @@
             <!-- Assumptions -->
             <div class="assumption-column">
                 <h3>Assumptions</h3>
+                <label for="feed_cost_without_dmx7">Feed Cost / Kg (Without DMX-7):</label>
+                <input type="number" id="feed_cost_without_dmx7" step="0.01"> 
+                <label for="feed_cost_with_dmx7">Feed Cost / Kg (With DMX-7):</label>
+                <input type="number" id="feed_cost_with_dmx7" step="0.01">               
                 <label for="rated_capacity">Rated Capacity of Pallet Mill (TPH):</label>
                 <input type="number" id="rated_capacity" step="0.01">
                 <label for="processing_cost">Processing Cost (of RM Cost):</label>
