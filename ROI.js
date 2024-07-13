@@ -1,4 +1,3 @@
-85% of storage used … If you run out, you can't create, edit, and upload files. Get 100 GB of storage for ₹130.00 ₹35.00/month for 2 months.
 function calculateComparison() {
     // Retrieve values from Control inputs
     let rmcr_control = parseFloat(document.getElementById('rmcr_control').value) || 0;
