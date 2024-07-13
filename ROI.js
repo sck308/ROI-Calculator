@@ -1,3 +1,4 @@
+
 function calculateComparison() {
     // Retrieve values from Control inputs
     let rmcr_control = parseFloat(document.getElementById('rmcr_control').value) || 0;
