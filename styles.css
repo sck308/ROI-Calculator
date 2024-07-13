@@ -1,3 +1,4 @@
+85% of storage used … If you run out, you can't create, edit, and upload files. Get 100 GB of storage for ₹130.00 ₹35.00/month for 2 months.
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,8 +33,6 @@
     <h3>DMX-7 Parameters</h3>
     <label for="rated_capacity_dmx7">Rated Capacity of Pallet Mill (TPH):</label>
     <input type="number" id="rated_capacity_dmx7" step="0.01">
-    <label for="processing_cost_dmx7">Processing Cost (% of RM Cost):</label>
-    <input type="number" id="processing_cost_dmx7" step="0.01">
     <label for="electricity_rate_dmx7">Electricity Rate (INR per KWH):</label>
     <input type="number" id="electricity_rate_dmx7" step="0.01">
     <label for="micronutrient_cost_dmx7">Cost of Micronutrients (INR per Kg):</label>
