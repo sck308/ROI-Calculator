@@ -1,4 +1,3 @@
-New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
 function calculateComparison() {
     // Retrieve values from Control inputs
     let rmcr_control = parseFloat(document.getElementById('rmcr_control').value) || 0;
