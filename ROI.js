@@ -1,4 +1,4 @@
-
+New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
 function calculateComparison() {
     // Retrieve values from Control inputs
     let rmcr_control = parseFloat(document.getElementById('rmcr_control').value) || 0;
@@ -137,11 +137,8 @@ function calculateComparison() {
         <td>INR ${dmx7_value.toFixed(3)}</td>
     </tr>
     <tr>
-    <th>Difference</th>
-    <td style="background-color: #ffeb3b; color: #d32f2f; font-weight: bold; padding: 10px; border-radius: 5px;">
-        <span style="font-size: 1.2em;">&#8377;</span> ${difference_amount.toFixed(3)}
-        <span style="font-size: 1.2em; margin-left: 5px;">&#9650;</span>
-    </td>
+        <th>Difference </th>
+        <td>INR ${difference_amount.toFixed(3)}</td>
     </tr>
     </table>
 
